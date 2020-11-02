@@ -44,7 +44,7 @@ jobs:
     - name: docs zip output
       run: |
         cd ./docs/docs
-        zip docs * -x *.ogv
+        zip ../../docs * -x *.ogv
     - name: Upload Release Docs
       id: upload-release-docs
       uses: actions/upload-release-asset@v1.0.1
