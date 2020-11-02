@@ -20,7 +20,7 @@ jobs:
     - uses: nerdyscout/kicad-exports@v2.1
       with:
       # Required - kibot config file
-        config: ./config/docs2.kibot.yaml
+        config: ./config/docs.kibot.yaml
       # optional - prefix to output defined in config
         dir: docs
       # optional - schematic file
@@ -30,7 +30,7 @@ jobs:
     - uses: nerdyscout/kicad-exports@v2.1
       with:
       # Required - kibot config file
-        config: fabrications.kibot.yaml
+        config: ./config/fabrications.kibot.yaml
       # optional - prefix to output defined in config
         dir: gerber
       # optional - schematic file
