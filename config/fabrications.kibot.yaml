@@ -77,7 +77,7 @@ outputs:
     options:
       use_aux_axis_as_origin: true
       metric_units: true
-      pth_and_npth_single_file: true
+      pth_and_npth_single_file: false
       minimal_header: true
       mirror_y_axis: false
 
