@@ -70,10 +70,10 @@ outputs:
       - layer: Edge.Cuts
         suffix: Edge_Cuts
 
-  - name: excellon_drill
+  - name: 'excellon_drill'
     comment: "Excellon drill files"
-    type: excellon
-    dir: Gerbers
+    type: "excellon"
+    dir: "Gerbers"
     options:
       metric_units: true
       pth_and_npth_single_file: true
