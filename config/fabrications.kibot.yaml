@@ -80,8 +80,7 @@ outputs:
       use_aux_axis_as_origin: false
       minimal_header: false
       mirror_y_axis: false
-      report: 'Conjunto-drl.rpt'
-      map: 'pdf'
+      map: 'ps'
 
   - name: 'position'
     comment: "Pick and place file"
