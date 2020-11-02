@@ -41,10 +41,12 @@ jobs:
         release_name: Release ${{ github.ref }}
         draft: false
         prerelease: false
-    - name: Zip output
-      run: zip docs docs/docs/*.*
-    - name: Upload Release Asset
-      id: upload-release-asset
+    - name: docs zip output
+      run: |
+        cd ./docs/docs
+        zip docs !*.ogv
+    - name: Upload Release Docs
+      id: upload-release-docs
       uses: actions/upload-release-asset@v1.0.1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -53,6 +55,22 @@ jobs:
         asset_path: docs.zip
         asset_name: docs.zip
         asset_content_type: application/zip
+    - name: docs zip output
+      run: |
+        cd ../../gerber/gerber
+        zip gerber *.*
+    - name: Upload Release Gerbers
+      id: upload-release-gerber
+      uses: actions/upload-release-asset@v1.0.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: gerber.zip
+        asset_name: gerber.zip
+        asset_content_type: application/zip
+
+
 
     - name: upload results
       uses: actions/upload-artifact@v2
