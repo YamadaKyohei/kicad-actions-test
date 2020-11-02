@@ -41,9 +41,9 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: docs
-        path: docs
+        path: docs/docs
     - name: upload results
       uses: actions/upload-artifact@v2
       with:
         name: gerber
-        path: gerber
+        path: gerber/gerber
