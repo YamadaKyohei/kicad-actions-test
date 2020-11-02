@@ -49,13 +49,10 @@ outputs:
       use_gerber_x2_attributes: false
       use_gerber_net_attributes: false
 
+    # for 2-layer pcb
     layers:
       - layer: F.Cu
         suffix: F_Cu
-      - layer: Inner.1
-        suffix: GND_Cu
-      - layer: Inner.2
-        suffix: Power_Cu
       - layer: B.Cu
         suffix: B_Cu
       - layer: F.Paste
